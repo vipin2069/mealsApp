@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal App</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>MEAL</h1>
+        <h1>APP</h1>
+    </header>
+    <div class="container" id="firstPage">
+        <input type="text" id="searchInput" placeholder="Search for meals..." />
+        <div id="suggestions">
+            <h2 class="title">
+                <img src="./dish.svg" alt="" />
+                Meals
+            </h2>
+            <div class="meals" id="search-meals"></div>
+            <div class="noMeals" id="noSearchMeals">
+                <h3 class="randomTitle">Search for meals</h3>
+            </div>
+        </div>
+        <div class="favMeals">
+            <h2 class="title">
+                <?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px"
+                    height="30px">
+                    <path d="M23,27l-8-7l-8,7V5c0-1.105,0.895-2,2-2h12c1.105,0,2,0.895,2,2V27z" />
+                </svg>
+                My Favourite Meals
+            </h2>
+            <div class="meals" id="fav-meals"></div>
+            <div class="noMeals" id="noFavMeals">
+                <h3 class="randomTitle">No meals available</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="secondPage">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #fa7777;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f5f7;
+}
+body {
+  display: flex;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f5f7;
+  min-height: 100vh;
+}
+header {
+  background-color: #fa7777;
+  width: 100px;
+}
+header h1 {
+  width: 100%;
+  word-break: break-all;
+  line-height: 60px;
+  color: #fff;
+  padding: 30px;
+  text-shadow: 3px 2px 3px #ccc;
+}
+.container {
+  margin: 0 auto;
+  width: calc(100% - 100px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f0f5f7;
+}
+
+h1 {
+  text-align: center;
+}
+
+#searchInput {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #cccccc72;
+  border-radius: 30px;
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+}
+
+#suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px 30px;
+}
+
+.meals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 26px;
+  justify-content: center;
+  max-height: 60vh;
+  overflow: auto;
+}
+.meal {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 23%;
+}
+.meal .mealImg {
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  height: 120px;
+}
+.mealFeature div {
+  width: calc(100% - 40px);
+}
+.meal h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  line-height: 20px;
+}
+.mealFeature p {
+  font-size: 14px;
+}
+.mealFeature {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.meal button svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  object-fit: contain;
+}
+.meal button {
+  background-color: #fa7777;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  height: 30px;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.meal button.active {
+  background-color: #fff;
+}
+.meal button.active svg {
+  fill: #fa7777;
+  width: 30px;
+  height: 30px;
+}
+
+.randomTitle {
+  margin: 0px auto;
+  padding: 35px;
+  text-align: center;
+  font-size: 28px;
+  color: #ccc;
+  background-color: #fff;
+  border-radius: 30px;
+  width: 100%;
+}
+.title {
+  color: #fa7777;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.favMeals {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px 30px;
+}
+.title svg,
+.title img {
+  fill: #fa7777;
+  height: 30px;
+  width: 30px;
+}
+
+/* detail page */
+#secondPage {
+  display: none;
+}
+.recipeHeader h3 {
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: grey;
+}
+h1 {
+  text-align: center;
+  line-height: 50px;
+}
+.recipeContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.recipeIngredients {
+  background: #fff;
+  padding: 35px;
+  width: 50%;
+}
+.recipeIngredients h4,
+.recipeDetails h4 {
+  width: 100%;
+  text-align: left;
+  color: grey;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.recipeImg {
+  width: 40%;
+}
+.recipeImg img {
+  width: 100%;
+  rotate: -6deg;
+  box-shadow: 2px 7px 20px 0px grey;
+}
+.recipeContainer table {
+  margin-top: 15px;
+  width: 100%;
+}
+.recipeContainer tbody {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 440px;
+  overflow: auto;
+}
+.recipeContainer th {
+  padding: 0px 10px 10px 0px;
+  width: fit-content;
+  text-align: left;
+}
+.recipeContainer td {
+  padding: 0px 10px 10px 0px;
+  border-bottom: 1px dashed lightgray;
+}
+.recipeDetails {
+  background: #fff;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  margin-top: 10px;
+}
+.video-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+button.backToHome {
+  background: #fa7777;
+  border: none;
+  padding: 10px 20px;
+  width: fit-content;
+  margin: 0px auto;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button.backToHome svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+@media screen and (max-width: 991px) {
+  .recipeContainer tbody {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  header h1 {
+    width: fit-content;
+    padding: 0px;
+  }
+  .container {
+    margin: 20px auto;
+    width: 100%;
+  }
+  .randomTitle {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .recipeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .recipeImg {
+    width: 80%;
+  }
+  .recipeDetails,
+  .recipeIngredients {
+    width: 100%;
+    padding: 20px;
+  }
+  .recipeDetails p {
+    font-size: 14px;
+  }
+  iframe#youtube-player {
+    width: 100%;
+  }
+  .meal .mealImg {
+    height: 90px;
+  }
+  #suggestions,
+  .favMeals {
+    padding: 20px;
+  }
+}
