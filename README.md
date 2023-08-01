@@ -17,8 +17,8 @@ Each meal in the list has a "Remove from Favourites" button to remove it from th
 # How to Use
 Clone this repository to your local machine.
 ```bash
-git clone [https://github.com/your-username/meal-app.git](https://github.com/vipin2069/mealsApp.git)
-cd meal-app
+git clone https://github.com/vipin2069/mealsApp.git
+cd mealsApp
 ```
 Open the index.html file in your web browser to launch the app.
 
